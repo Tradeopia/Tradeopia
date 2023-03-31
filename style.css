@@ -1,0 +1,215 @@
+:root {
+    --border-radius: .2rem; 
+--primary: #0288D1;   
+--primary-hover: #0381c5;   
+--on-primary: white; 
+--dimmed-text: rgba(255, 255, 255, 0.75); 
+--dimmed: rgba(255, 255, 255, 0.199); 
+--shadow: rgba(112, 112, 112, 0.384);
+--surface: #F7F7F7;
+--on-surface: rgb(34, 34, 34);
+--on-surface-line: rgba(155, 155, 155, 0.4); 
+--on-surface-dimmed: rgba(0, 0, 0, 0.55);   
+--on-surface-dimmed-icon: rgba(0, 0, 0, 0.35);   
+--hover: rgba(121, 121, 121, 0.35); 
+--accent: #4f4f4f;  
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;  
+}
+
+html {
+    background-color: var(--surface);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.container {    
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow) 0rem 0rem 1rem;
+    margin: auto;        
+    display: flex;
+    flex-direction: column;    
+    background-color: var(--primary);   
+}
+
+
+.hero {
+    border-radius: var(--border-radius);
+    background-color: var(--primary);
+    color: var(--on-primary);                 
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.hero__title, .hero__subtitle {
+    font-size: 1.4rem;
+    margin: .4rem;
+    margin-top: 1rem;
+}
+
+.hero__subtitle {    
+ font-size: .9rem;
+ color: var(--dimmed-text);
+}
+
+.contact {    
+    color: var(--on-primary);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;   
+    border-top: 1px solid var(--dimmed); 
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem;
+    font-size: .8rem;  
+    text-transform: uppercase;    
+    border-left: 1px solid var(--dimmed);
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+a.icon,
+a.icon:hover,
+a.icon:focus,
+a.icon:visited {
+    text-decoration: none;
+    color: var(--on-primary);
+}
+
+a.icon:hover {
+    background-color: var(--primary-hover);
+}
+
+.contact .icon:nth-child(1){
+    border-left: none;
+}
+
+.icon i, .icon span {
+    display: block;    
+    margin: .4rem;
+}
+
+.body {    
+    background-color: var(--surface);
+    padding: 1.5rem;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+table {
+    margin: auto;
+    width: 80%;    
+    border-collapse: collapse;
+}
+
+td i {
+    color: var(--on-surface-dimmed-icon);
+}
+
+.data {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;  
+    padding: 1rem;  
+    border-bottom: 1px solid var(--on-surface-line);
+}
+
+.data a,
+.data a:visited,
+.data a:hover,
+.data a:focus {
+    text-decoration: none;    
+    color: var(--on-surface);
+    margin-bottom: .3rem;
+}
+
+.data span {
+    color: var(--on-surface-dimmed);    
+    font-size: .95rem;
+}
+
+.background {
+    display: none;
+}
+
+button {
+    border: none;
+    background-color: var(--surface);
+    display: inline-block;
+    width: fit-content;
+    padding: .5rem; 
+    padding-left: 0;
+    transition: all ease-in-out .2s;
+    /* font-family: 'Comfortaa', cursive;  */
+}
+
+.data button:hover{
+    background-color: var(--hover);  
+    padding-left: .5rem;  
+    
+}
+
+.data button {
+    margin-top: 1rem;
+}
+
+.vcard {
+    display: flex; 
+    align-items: center;   
+    justify-content: center;
+    margin: 1.5rem;
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;    
+    background-color: var(--accent);
+    color: var(--on-primary);
+    border-radius: var(--border-radius); 
+    box-shadow: var(--shadow) 0rem 0rem 1rem .3rem;  
+}
+
+.vcard:hover {
+    box-shadow: var(--shadow) 0rem 0.3rem 1rem .5rem;
+}
+
+.vcard span {
+    padding-left: 1rem;
+}
+.vcard i {
+    color: var(--on-primary);
+}
+
+@media (min-width: 700px) {
+    .container {
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+        max-width: 600px;        
+    }
+
+    .background {
+        background-color: var(--primary);
+        display: block;
+        position: absolute;
+        height: 17.25rem;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+    }
+}
